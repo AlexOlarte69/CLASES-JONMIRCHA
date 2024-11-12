@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>programacion orientda a objetos POO</h1>
+    <script>
+
+        class persona{
+
+            constructor(nombre,apellido,edad,profesion,dni){
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+                this.profesion = profesion;
+                this.dni = dni;
+
+            }
+
+
+            saludar(){
+                console.log(`Hola mi nombres es: ${this.nombre}`);
+            }
+
+            votar(){
+                console.log(`Mi DNI para poder elegir al presidente es: ${this.dni}`);
+            }
+
+            caminar(){
+                console.log(`Tengo apenas ${this.edad} y puedo caminar correctamente`);
+            }
+
+
+
+        }
+
+        const persona1 = new persona('Alex','olarte',17,'sistemas',7546978);
+        persona1.saludar();
+        persona1.votar();
+        persona1.caminar();
+
+        console.log('================================================')
+
+        persona2 = new persona('maria','gonzales',48,'enfermeria',4512878);
+        persona2.saludar();
+        persona2.votar();
+
+        
+
+
+    </script>
+</body>
+</html>
