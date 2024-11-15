@@ -544,6 +544,7 @@ class perro extends animal{
   constructor(nombre,genero,tamanio){
     super(nombre,genero);
     this.tamanio = tamanio;
+    this.raza = null;
   }
 
   sonar(){
@@ -554,7 +555,21 @@ class perro extends animal{
     console.log('guauu guauu');
   }
 
+  static queEres(){
+    console.log('los perros somos animales mamifereos que pertenecen a la familia de los caninos');
+
+  }
+
+get getraza(){
+return this.raza;
 }
+
+set setraza(raza){
+  this.raza = raza;
+}
+}
+
+perro.queEres();
 
 const scooby = new perro('scooby','macho','gigante');
 
@@ -563,12 +578,12 @@ console.log(scooby);
 scooby.ladrar();
 scooby.sonar();
 
+scooby.setraza = "gran danes";
+
+console.log(scooby.getraza);
 
 
-
-
-
-
+//METODOS ESTATICOS GET Y SET
 
  
     </script>
