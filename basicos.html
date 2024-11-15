@@ -532,16 +532,36 @@ const body = new animal('bodi','macho'),
     layla = new animal('layla', 'hembra');
 
 console.log(body);
-console.log(layla);
-
 body.sonar();
 body.saludar();
-
-
+console.log(layla);
 layla.saludar();
 layla.sonar();
 
+//HERENCIA
 
+class perro extends animal{
+  constructor(nombre,genero,tamanio){
+    super(nombre,genero);
+    this.tamanio = tamanio;
+  }
+
+  sonar(){
+    console.log(`soy ${this.nombre} y hago un ladrido`);
+  }
+
+  ladrar(){
+    console.log('guauu guauu');
+  }
+
+}
+
+const scooby = new perro('scooby','macho','gigante');
+
+console.log(scooby);
+
+scooby.ladrar();
+scooby.sonar();
 
 
 
